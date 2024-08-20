@@ -1,0 +1,75 @@
+// Date Created         : 11 August 2024
+// Author               : Johan Hartono Ho
+// Modified/Updated by  : 19 August 2024
+
+plugins {
+    id 'java'
+    id ("io.qameta.allure") version "2.11.0"
+}
+
+group = 'org.com.johanhartono'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.5'
+    testImplementation group: 'io.rest-assured',name: 'rest-assured', version: '4.5.1'
+    testImplementation group: 'org.json',name: 'json', version: '20220924'
+    testImplementation group: 'io.rest-assured',name: 'json-schema-validator', version: '5.3.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    implementation group: 'io.cucumber',name: 'cucumber-java',version: '7.12.0'
+    testImplementation group: 'io.cucumber',name: 'cucumber-junit',version: '7.12.0'
+    testImplementation group: 'io.qameta.allure', name: 'allure-junit4', version: '2.11.0'
+    testImplementation group: 'org.assertj',name: 'assertj-core',version: '3.24.0'
+    implementation group: 'org.seleniumhq.selenium',name: 'selenium-java', version: '4.10.0'
+    testImplementation 'io.github.bonigarcia:webdrivermanager:5.9.2'
+}
+
+
+test {
+    useJUnitPlatform()
+    systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
+}   
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+tasks.register('apiTest') {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+        main = "io.cucumber.core.cli.Main"
+        classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+        args = [
+            '--plugin','pretty',
+            '--plugin','html:reports/cucumber-api-report.html',
+            '--glue','stepDef',
+            '--tags','@api',
+            'src/test/java/features']
+        }
+    }
+}
+
+tasks.register('webuiTest') {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+        main = "io.cucumber.core.cli.Main"
+        classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+        args = [
+            '--plugin','pretty',
+            '--plugin','html:reports/cucumber-api-report.html',
+            '--glue','stepDef',
+            '--tags','@web',
+            'src/test/java/features']
+        }
+    }
+}

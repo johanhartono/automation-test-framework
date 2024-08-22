@@ -1,4 +1,4 @@
-name: Selenium Web UI Automation Workflow
+name: Automation Workflow
 
 on:
   push:

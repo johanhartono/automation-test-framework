@@ -23,13 +23,13 @@ jobs:
         distribution: 'temurin'
     # install browser
     - name: Setup Chrome
-      uses: browser-actions/setup-chrome@v1.7.2
+      uses: browser-actions/setup-chrome@v1.8.2
     # setup gradlew
     - name: Setup gradlew
       run: chmod +x gradlew
     # Execute gradle command for running api test
-    #- name: Execute API Test
-    #  run: ./gradlew apiTest
+    - name: Execute API Test
+      run: ./gradlew apiTest
     # Execute gradle command for running webui test
     - name: Execute Web UI Test
       run: ./gradlew webuiTest   

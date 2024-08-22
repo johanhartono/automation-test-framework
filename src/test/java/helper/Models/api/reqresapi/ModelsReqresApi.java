@@ -1,3 +1,7 @@
+// Date Created         : 22 August 2024
+// Author               : Johan Hartono Ho
+// Modified/Updated by  : 22 August 2024
+
 package helper.Models.api.reqresapi;
 import org.json.JSONObject;
 
@@ -48,6 +52,7 @@ public class ModelsReqresApi {
         setupHeaders();
         String finalEndpoint = endpoint + "/"+ user_id;
         return request.when().delete(finalEndpoint);
+        
     }
     //PUT
     public static Response updatePutUser(String endpoint) {

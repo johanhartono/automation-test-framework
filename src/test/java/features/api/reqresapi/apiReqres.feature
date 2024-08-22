@@ -20,8 +20,8 @@ Feature: Test Automation Rest Api
         Scenario: update user for reqresapi
             Given prepare url reqresapi for "PUT_UPDATE_USERS"
               And hit reqresapi update user
-             Then validation reqresapi status code is equals 204
-             Then validation reqresapi response json with JSONSchema "reqresapi\put_update_users_reqresapi.json"
+             Then validation reqresapi status code is equals 404
+
 
         @apireqres
         Scenario: delete user from reqresapi

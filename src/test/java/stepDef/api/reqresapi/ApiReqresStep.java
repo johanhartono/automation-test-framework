@@ -43,5 +43,12 @@ public class ApiReqresStep {
         apiReqresPage.hit_api_update_user();
     }
 
+    @Given("hit reqresapi delete user")
+    public void hit_reqresapi_delete_user() {
+        apiReqresPage.hit_api_delete_user();
+    }
+
+
+
 
 }

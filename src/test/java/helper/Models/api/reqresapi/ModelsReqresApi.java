@@ -8,10 +8,10 @@ import io.restassured.specification.RequestSpecification;
 
 public class ModelsReqresApi {
     public static final String GET_LIST_USERS = EndPoint.host_reqresapi + "users?page=1";
-    public static final String CREATE_NEW_USERS = EndPoint.host_reqresapi + "users";
-    public static final String DELETE_USERS =  EndPoint.host_reqresapi + "users";
-    public static final String PUT_UPDATE_USERS =  EndPoint.host_reqresapi + "users";
-    public static final String PATCH_UPDATE_USERS = EndPoint.host_reqresapi + "users";
+    public static final String CREATE_NEW_USERS = EndPoint.host_reqresapi + "users/";
+    public static final String DELETE_USERS =  EndPoint.host_reqresapi + "users/";
+    public static final String PUT_UPDATE_USERS =  EndPoint.host_reqresapi + "users/";
+    public static final String PATCH_UPDATE_USERS = EndPoint.host_reqresapi + "users/";
     
     private static RequestSpecification request;
     
@@ -47,7 +47,7 @@ public class ModelsReqresApi {
     public static Response deleteUser(String endpoint,String user_id) {
         setupHeaders();
         String finalEndpoint = endpoint + "/"+ user_id;
-        return request.when().get(finalEndpoint);
+        return request.when().delete(finalEndpoint);
     }
     //PUT
     public static Response updatePutUser(String endpoint) {
@@ -60,7 +60,7 @@ public class ModelsReqresApi {
         //payload.put("id",id);
         payload.put("name",name);
         payload.put("job",job);
-        payload.put("createdAt",updateAt);
+        payload.put("updateAt",updateAt);
        
         String finalEndpoint = endpoint + "/" + id;
         return request.body(payload.toString()).when().put(finalEndpoint);

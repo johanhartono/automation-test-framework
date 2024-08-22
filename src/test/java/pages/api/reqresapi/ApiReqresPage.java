@@ -15,7 +15,8 @@ import java.util.List;
 import java.io.File;
 
 public class ApiReqresPage {
-    String setURL, global_id;
+    String setURL, user_id;
+    
     Response res;
 
    
@@ -58,7 +59,9 @@ public class ApiReqresPage {
 
     // DELETE
     public void hit_api_delete_user() {
-        res = deleteUser(setURL, global_id);
+        user_id = "0037";
+        res = deleteUser(setURL, user_id);
+        System.out.println(setURL);
         System.out.println(res.getBody().asPrettyString());
     }
 
@@ -103,7 +106,7 @@ public class ApiReqresPage {
         assertThat(last_name).isNotNull();
         assertThat(avatar).isNotNull();
 
-        global_id = Integer.toString(id);
+    
 
     }
 

@@ -10,7 +10,7 @@
 3. https://fakerestapi.azurewebsites.net/index.html</br>
 4. https://fakestoreapi.com/</br>
 5. https://reqres.in/</br>
-6.https://fakeapi.platzi.com/</br>
+6. https://fakeapi.platzi.com/</br>
 7. etc etc. googling yourself</br>
 </br>
 **Source code siap dipakai untuk mengetest API dan Web UI Elements**.</br>

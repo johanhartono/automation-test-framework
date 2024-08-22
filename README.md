@@ -1,6 +1,6 @@
 **Project: Final Project Jay Jay School QA Profesi** </br>
 **Language:** Java, Gherkins, Cucumber</br>
-**Tech:** Gradle, selenium web driver, RestAssured,Git, Github, Github Actions workflow, CLI Gradlew</br>
+**Tech:** Gradle, Page Object Model, selenium web driver, RestAssured,Git, Github, Github Actions workflow, CLI Gradlew</br>
 **IDE:** VS Cod / IntelliDJA</br>
 **Purpose of Project:** Automation API and Web UI Testing Framework</br>
 
@@ -15,10 +15,10 @@ Source API for learning:</br>
 
 Source code siap dipakai untuk mengetest API dan Web UI Elements.
 Struktur Folder Project dibagi menjadi  5 bagian:
-1. features </br>
-2. helper</br>
-3. pages</br>
-4. runner</br>
-5. stepFef </br>
+1. features (Gherkins language) </br>
+2. helper (Utilities dan model) </br>
+3. pages (Page Object Model) </br>
+4. runner (Mass Runing annotation) </br>
+5. stepFef (Definisi step dari features) </br>
 
    

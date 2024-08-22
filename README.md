@@ -12,3 +12,13 @@ Source API for learning:</br>
 5. https://reqres.in/</br>
 6.https://fakeapi.platzi.com/</br>
 7. etc etc. googling yourself</br>
+
+Source code siap dipakai untuk mengetest API dan Web UI Elements.
+Struktur Folder Project dibagi menjadi  5 bagian:
+1. features </br>
+2. helper</br>
+3. pages</br>
+4. runner</br>
+5. stepFef </br>
+
+   

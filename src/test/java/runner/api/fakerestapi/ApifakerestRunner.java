@@ -1,4 +1,4 @@
-package runner;
+package runner.api.fakerestapi;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -9,9 +9,9 @@ import org.junit.runner.RunWith;
         plugin = {"pretty"},
         glue = {"stepDef"},
         features = {"src/test/java/features"},
-        tags = "@web",
+        tags = "@apifakerest",
         monochrome = true
 
 )
-public class ApiRunner {
+public class ApifakerestRunner {
 }

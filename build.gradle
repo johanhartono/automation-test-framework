@@ -42,7 +42,7 @@ configurations {
     }
 }
 
-tasks.register('apiTest') {
+ tasks.register('apiTest') {
     dependsOn assemble, testClasses
     doLast {
         javaexec {
@@ -52,12 +52,12 @@ tasks.register('apiTest') {
             '--plugin','pretty',
             '--plugin','html:reports/cucumber-api-report.html',
             '--glue','stepDef',
-            '--tags','@api',
+            '--tags','@apireqres',
             'src/test/java/features']
         }
     }
 }
-
+ 
 tasks.register('webuiTest') {
     dependsOn assemble, testClasses
     doLast {
@@ -68,7 +68,7 @@ tasks.register('webuiTest') {
             '--plugin','pretty',
             '--plugin','html:reports/cucumber-api-report.html',
             '--glue','stepDef',
-            '--tags','@web',
+            '--tags','@websaucedemo',
             'src/test/java/features']
         }
     }

@@ -1,6 +1,6 @@
 Feature: Test Automation Web
 
-        @web1
+        @webloginsaudemo
         Scenario: Test Login web saucedemo postive testing
                   using valid username and password
             Given Open web login page
@@ -10,10 +10,18 @@ Feature: Test Automation Web
              Then user click hamburger icon on top on the left
               And user logout from system and return to login page
 
-        @web2
+        @webloginsaudemo
         Scenario: Test Login web saucedemo negative testing
                   using invalid username dan valid password
             Given Open web login page
              Then user input username "premium_user"
               And user input password "secret_sauce"
+              And user click login button  will not be able to login
+
+        @webloginsaudemo
+        Scenario: Test Login web saucedemo negative testing
+                  using invalid username and  invalid password
+            Given Open web login page
+             Then user input username "invalid_user"
+              And user input password "invalid_password"
               And user click login button  will not be able to login

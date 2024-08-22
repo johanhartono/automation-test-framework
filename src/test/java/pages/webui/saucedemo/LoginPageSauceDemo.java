@@ -1,14 +1,17 @@
 // Date Created         : 11 August 2024
 // Author               : Johan Hartono Ho
-// Modified/Updated by  : 21 August 2024
+// Modified/Updated by  : 22 August 2024
 
-package pages.webui;
+package pages.webui.saucedemo;
 
 import org.openqa.selenium.By;
 
 import helper.Utility;
 
-public class LoginPage {
+public class LoginPageSauceDemo {
+
+    //Selected web elements
+
     static By input_username = By.cssSelector("input#user-name");
     static By input_pwd = By.xpath("//*[@id=\"password\"]");
     static By btn_login = By.id("login-button");
@@ -16,8 +19,11 @@ public class LoginPage {
     static By icon_cart = By.xpath("//a[@class='shopping_cart_link']");
     static By menu_logout = By.id("logout_sidebar_link");
 
+    //End of Selected web elements
+
     public static void openBrowser() {
-        Utility.driver.get("https://www.saucedemo.com");
+        Utility.startDriver();
+        Utility.driver.get(helper.EndPoint.host_saucedemoweb);
 
     }
 
@@ -39,7 +45,6 @@ public class LoginPage {
         Utility.driver.findElement(menu_logout).click();
     }
     
-
     public static void quitDriver() {
         // Utility.quitDriver();
     }

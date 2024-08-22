@@ -4,7 +4,6 @@
 
 package stepDef;
 
-import helper.Utility;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
@@ -24,7 +23,7 @@ public class Hooks {
 
     @Before
     public static void beforeTest() {
-        Utility.startDriver();
+        //Utility.startDriver();
     }
 
     @After

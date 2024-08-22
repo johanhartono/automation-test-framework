@@ -2,16 +2,24 @@
 // Author               : Johan Hartono Ho
 // Modified/Updated by  : 19 August 2024
 
-package helper;
+package helper.Models.api.fakerestapi;
 
 import org.json.JSONObject;
 
+import helper.EndPoint;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class Models {
+public class Modelsfakerestapi {
 
+    public static final String GET_LIST_USERS = EndPoint.host_fakerestapi + "Users";
+    public static final String CREATE_NEW_USERS = EndPoint.host_fakerestapi + "Users";
+    public static final String DELETE_USERS =  EndPoint.host_fakerestapi + "Users";
+    public static final String UPDATE_USERS =  EndPoint.host_fakerestapi + "Users";
+    public static final String PUT_UPDATE_USERS =  EndPoint.host_fakerestapi + "users";
+    public static final String PATCH_UPDATE_USERS = EndPoint.host_fakerestapi + "users";
+    
     private static RequestSpecification request;
     
     public static void setupHeaders() {
@@ -46,7 +54,7 @@ public class Models {
         return request.when().get(finalEndpoint);
     }
     //PATCH
-    public static Response updateCreateUser(String endpoint,String ids) {
+    public static Response updatePatchUser(String endpoint,String ids) {
         setupHeaders();
         String id = "37";
         String userName = "johan";
@@ -56,7 +64,7 @@ public class Models {
         payload.put("username",userName);
         payload.put("password",password);
        
-        String finalEndpount = endpoint + "/" + ids;
-        return request.body(payload.toString()).when().patch(finalEndpount);
+        String finalEndpoint = endpoint + "/" + ids;
+        return request.body(payload.toString()).when().patch(finalEndpoint);
      }
 }

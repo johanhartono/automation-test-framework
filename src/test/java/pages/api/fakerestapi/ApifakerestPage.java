@@ -2,40 +2,46 @@
 // Author               : Johan Hartono Ho
 // Modified/Updated by  : 19 August 2024
 
-package pages.api;
+package pages.api.fakerestapi;
 
-import helper.EndPoint;
 import helper.Utility;
+import helper.Models.api.fakerestapi.Modelsfakerestapi;
+import helper.Models.api.reqresapi.ModelsReqresApi;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-import static helper.Models.deleteUser;
-import static helper.Models.getListUsers;
-import static helper.Models.postCreateUser;
-import static helper.Models.updateCreateUser;
+import static helper.Models.api.fakerestapi.Modelsfakerestapi.deleteUser;
+import static helper.Models.api.fakerestapi.Modelsfakerestapi.getListUsers;
+import static helper.Models.api.fakerestapi.Modelsfakerestapi.postCreateUser;
+import static helper.Models.api.fakerestapi.Modelsfakerestapi.updatePatchUser;
 import static org.assertj.core.api.Assertions.assertThat;
 import java.util.List;
 
 import java.io.File;
 
-public class ApiPage {
+
+public class ApifakerestPage {
     String setURL, global_id;
     Response res;
 
-    public void prepareURL(String Url) {
+   
+    public void prepareURLfakeRestAPI(String Url) {
         switch (Url) {
             case "GET_LIST_USERS":
-                setURL = EndPoint.GET_LIST_USERS;
+                setURL = ModelsReqresApi.GET_LIST_USERS;
                 break;
             case "CREATE_NEW_USERS":
-                setURL = EndPoint.CREATE_NEW_USERS;
+                setURL = ModelsReqresApi.CREATE_NEW_USERS;
                 break;
             case "DELETE_USERS":
-                setURL = EndPoint.DELETE_USERS;
+                setURL = ModelsReqresApi.DELETE_USERS;
                 break;
-            case "UPDATE_USERS":
-                setURL = EndPoint.DELETE_USERS;
+            case "PUT_UPDATE_USERS":
+                setURL = ModelsReqresApi.PUT_UPDATE_USERS;
+                break;
+            case "PATCH_UPDATE_USERS":
+                setURL = ModelsReqresApi.PATCH_UPDATE_USERS;
                 break;
             default:
                 setURL = "Please input right Url";
@@ -51,7 +57,7 @@ public class ApiPage {
         System.out.println(res.getBody().asPrettyString());
         // POST
     }
-
+    //POST
     public void hit_api_post_create_new_user() {
         res = postCreateUser(setURL);
         System.out.println(res.getBody().asPrettyString());
@@ -64,8 +70,8 @@ public class ApiPage {
     }
 
     // PATCH
-    public void hit_api_update_user() {
-        res = updateCreateUser(setURL, global_id);
+    public void hit_api_patch_update_user() {
+        res = updatePatchUser(setURL, global_id);
         System.out.println(res.getBody().asPrettyString());
     }
 

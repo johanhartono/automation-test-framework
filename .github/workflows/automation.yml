@@ -28,8 +28,8 @@ jobs:
     - name: Setup gradlew
       run: chmod +x gradlew
     # Execute gradle command for running api test
-    #- name: Execute API Test
-    #  run: ./gradlew apiTest
+    - name: Execute API Test
+      run: ./gradlew apiTest
     # Execute gradle command for running webui test
     - name: Execute Web UI Test
       run: ./gradlew webuiTest   

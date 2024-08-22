@@ -9,7 +9,6 @@ public class EndPoint {
 
     //API Testing
     public static final String host_fakerestapi = "https://fakerestapi.azurewebsites.net/api/v1/";
-    public static final String host_gorestapi = "https://gorest.co.in/public/v2/";
     public static final String host_reqresapi = "https://reqres.in/api/";
     public static final String host_dummyapi = "https://dummyapi.io/data/v1/";
 

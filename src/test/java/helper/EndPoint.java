@@ -16,6 +16,9 @@ public class EndPoint {
     //Web Testing
     public static final String host_saucedemoweb = "https://www.saucedemo.com";
     public static final String host_orangehrmweb = "https://johanhartono.my.id/OrangeHR/web/index.php/auth/login";
+    public static final String host_demoblazeweb = "https://www.demoblaze.com/";
+
+    
   
 
 

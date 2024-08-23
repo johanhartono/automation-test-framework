@@ -26,5 +26,5 @@
 **Cara Menjalankan Project:** </br>
 1. Clone Repository </br>
 2. Buka dengan IDE favorit anda. lebih cenderung menggunakan VSCode/IntelliDJA</br>
-3. lakukan gradle synscing. </br>
+3. lakukan gradle syncing. </br>
 4. setelah itu jalankan runner dari folder runner untuk API dan Web.

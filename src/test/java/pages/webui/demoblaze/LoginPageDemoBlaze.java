@@ -14,7 +14,7 @@ public class LoginPageDemoBlaze {
  
      public static void openBrowser() {
          Utility.startDriver();
-         Utility.driver.get(helper.EndPoint.host_saucedemoweb);
+         Utility.driver.get(helper.EndPoint.host_demoblazeweb);
  
      }
  

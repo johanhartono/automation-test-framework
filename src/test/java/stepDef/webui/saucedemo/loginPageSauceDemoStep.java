@@ -11,7 +11,7 @@ public class loginPageSauceDemoStep {
         this.loginPage = new LoginPageSauceDemo();
     }
 
-    @Given("Open web login page")
+    @Given("Open web saucedemo login page")
     public void Open_web_login_page() {
         LoginPageSauceDemo.openBrowser();
     }

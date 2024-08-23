@@ -48,10 +48,6 @@ public class ApiReqresStep {
         apiReqresPage.hit_api_delete_user();
     }
 
-    @Given("Open web demoblaze login page")
-    public void Open_web_demoblaze_login_page() {
-        // Write code here that turns the phrase above into concrete actions
-    }
 
 
 

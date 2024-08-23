@@ -6,7 +6,6 @@ package pages.api.fakerestapi;
 
 import helper.Utility;
 import helper.Models.api.fakerestapi.Modelsfakerestapi;
-import helper.Models.api.reqresapi.ModelsReqresApi;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -29,19 +28,19 @@ public class ApifakerestPage {
     public void prepareURLfakeRestAPI(String Url) {
         switch (Url) {
             case "GET_LIST_USERS":
-                setURL = ModelsReqresApi.GET_LIST_USERS;
+                setURL = Modelsfakerestapi.GET_LIST_USERS;
                 break;
             case "CREATE_NEW_USERS":
-                setURL = ModelsReqresApi.CREATE_NEW_USERS;
+                setURL = Modelsfakerestapi.CREATE_NEW_USERS;
                 break;
             case "DELETE_USERS":
-                setURL = ModelsReqresApi.DELETE_USERS;
+                setURL = Modelsfakerestapi.DELETE_USERS;
                 break;
             case "PUT_UPDATE_USERS":
-                setURL = ModelsReqresApi.PUT_UPDATE_USERS;
+                setURL = Modelsfakerestapi.PUT_UPDATE_USERS;
                 break;
             case "PATCH_UPDATE_USERS":
-                setURL = ModelsReqresApi.PATCH_UPDATE_USERS;
+                setURL = Modelsfakerestapi.PATCH_UPDATE_USERS;
                 break;
             default:
                 setURL = "Please input right Url";

@@ -28,3 +28,14 @@
 2. Buka dengan IDE favorit anda. lebih cenderung menggunakan VSCode/IntelliDJA</br>
 3. lakukan gradle syncing. </br>
 4. setelah itu jalankan runner dari folder runner untuk API dan Web.
+
+Contoh hasil Test Run cucumber:
+1. @web
+   ![image](https://github.com/user-attachments/assets/f3444b62-3de2-41bb-a946-6ff910b4a4c0)
+
+3. @api
+
+   ![image](https://github.com/user-attachments/assets/f96c9be2-fd2f-4da9-a51f-cf92a094d968)
+   ![image](https://github.com/user-attachments/assets/f324d5f5-69f7-41f5-9985-77ee33ef40cc)
+
+   

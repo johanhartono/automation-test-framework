@@ -53,4 +53,6 @@
 
 ![image](https://github.com/user-attachments/assets/a698d631-5a8a-4b04-ad30-b22300137ecd)
 
+Notes: untuk menjalankan di github action workflow perlu dipehartikan opsi chrome headless harus diaktifkan
+![image](https://github.com/user-attachments/assets/bd5602f8-fa4a-49f0-8a15-ff04c9c4869e)
 

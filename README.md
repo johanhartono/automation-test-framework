@@ -49,6 +49,8 @@
 **Contoh Hasil Github Action Wofklow**
 ![image](https://github.com/user-attachments/assets/a67f850e-c972-4a22-9911-3fab68086528)
 
+![image](https://github.com/user-attachments/assets/11507a4f-85a3-4d16-a688-e54714b1ea4d)
+
 ![image](https://github.com/user-attachments/assets/8d2b292c-1ae6-4583-8c02-3ce52be5aa40)
 
 ![image](https://github.com/user-attachments/assets/a698d631-5a8a-4b04-ad30-b22300137ecd)

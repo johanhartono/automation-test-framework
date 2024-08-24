@@ -2,7 +2,7 @@ package stepDef.webui.demoblaze;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import pages.webui.demoblaze.LoginPageDemoBlaze;;
+import pages.webui.demoblaze.LoginPageDemoBlaze;
 
 public class loginPageDemoBlazeStep {
     @Given("Open web demoblaze login page")

@@ -8,7 +8,7 @@ Feature: Test Automation Rest Api
               And hit api get list users
              Then validation status code is equals 200
              Then validation response body get list users
-             Then validation response json with JSONSchema "fakerestapi\get_list_users_fakerestapi.json"
+             Then validation response json with JSONSchema "fakerestapi/get_list_users_fakerestapi.json"
 
         @apifakerest
         Scenario: Test create new user to fakerestapi
@@ -16,7 +16,7 @@ Feature: Test Automation Rest Api
               And hit api post create new user
              Then validation status code is equals 200
              Then validation response body post create new  user
-             Then validation response json with JSONSchema "fakerestapi\post_create_new_users_fakerestapi.json"
+             Then validation response json with JSONSchema "fakerestapi/post_create_new_users_fakerestapi.json"
 
         @apifakerest
         Scenario: Test delete user from fakerestapi
